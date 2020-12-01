@@ -1,0 +1,169 @@
+@import"libs/mixins.scss";
+button {
+    @include slideDown;
+    background-color: red;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    transition: 0.5s;
+}
+
+form {
+    width: 20%;
+    & input {
+        border: 2px solid black;
+        border-radius: 100rem;
+        color: blue;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        outline: none;
+        padding: .5rem 1.5rem;
+        width: 100%;
+        transition: background-color 400ms;
+        &:focus {
+            border: 2px solid green;
+        }
+        &:not(:focus):invalid {
+            background: red;
+            border: 2px solid red;
+            color: black;
+        }
+    }
+}
+
+.carre {
+    width: 15em;
+    height: 15em;
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    &:active {
+        transform: translate(-50%, -50%) rotate(45deg);
+        transform-origin: 100%, 100%;
+    }
+}
+
+.before {
+    p {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 100px;
+        &::before {
+            content: 'beffore';
+            color: green;
+            background: red;
+            width: 50px;
+            height: 50px;
+            border: 2px solid green;
+        }
+        &::after {
+            content: 'After';
+            background: green;
+            width: 50px;
+            height: 50px;
+            border: 2px solid red;
+        }
+    }
+}
+
+.loading {
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid grey;
+    border-radius: 50%;
+    border-top-color: red;
+    animation: 1s spin infinite ease-in-out;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#whatever:after {
+    content: "\f058";
+    display: inline-block;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.jauge {
+    width: 100px;
+    height: 200px;
+    display: block;
+    background-color: #303030;
+    position: relative;
+}
+
+.jauge-remplissage {
+    transition: all 0.3s linear 0s;
+    background-color: #33BEE5;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.jauge:hover .jauge-remplissage {
+    height: 100%;
+}
+
+#over {
+    width: 50px;
+    border: 1px solid red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#content {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    max-width: 100%;
+    border: 2px solid gold;
+    background-attachment: fixed;
+    #titre {
+        width: 70%;
+        border: 2px solid red;
+    }
+    #prix {
+        width: 30%;
+        border: 2px solid green;
+    }
+    #animation {
+        width: 0%;
+        i {
+            color: red;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+/*
+&:hover::after {
+    animation: slideLeft 400ms;
+    transition-delay: 50s;
+    content: url("images/check-circle-solid-svg.png");
+    display: inline-block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: red;
+    width: 20%;
+}*/
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
