@@ -1,0 +1,365 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes chargement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes heartColor {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+    color: yellow;
+  }
+}
+* body {
+  max-width: 426px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+}
+
+.loading {
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #9356dc;
+  border-radius: 50%;
+  border-top-color: #ff79da;
+  animation: 5s spin forwards;
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+  background-image: url("images/logo/ohmyfood.png");
+  background-attachment: fixed;
+  left: 30%;
+}
+
+header {
+  text-align: center;
+  animation: chargement 8s forwards;
+}
+header #position {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #ededed;
+  font-weight: bold;
+  border-top: 3px solid grey;
+}
+header #position i {
+  margin-right: 12px;
+}
+header #intro {
+  background-color: #f2f2f2;
+}
+header #intro .bold {
+  font-weight: bolder;
+  font-size: 37px;
+  padding-top: 30px;
+}
+header #intro button {
+  background: linear-gradient(to top left, #9345dc, #ff79da);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px #f2f2f2;
+  padding: 15px 30px 15px 30px;
+  color: white;
+  transition: transform;
+  margin-bottom: 50px;
+}
+header #intro button:hover {
+  transition: 400ms;
+  background: #bc95e9;
+  box-shadow: 0 30px 30px #ababab;
+}
+
+section {
+  animation: chargement 8s forwards;
+  margin-top: 30px;
+}
+section article {
+  text-align: center;
+}
+section article h2 {
+  text-align: left;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+section article #fonctionnement {
+  margin-bottom: 20px;
+}
+section article #fonctionnement h2 {
+  font-size: 20px;
+}
+section article #fonctionnement ol {
+  text-align: left;
+  padding: 20px;
+}
+section article #fonctionnement ol li {
+  background-color: #f2f2f2;
+  margin: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  box-shadow: 0 10px 10px #ededed;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 90%;
+  font-weight: bold;
+  list-style-type: none;
+  counter-increment: liste;
+  cursor: pointer;
+}
+section article #fonctionnement ol li:hover {
+  background-color: rgba(100, 148, 237, 0.3);
+}
+section article #fonctionnement ol li:hover i {
+  color: #9356dc;
+}
+section article #fonctionnement ol li:before {
+  margin: auto;
+  content: counter(liste);
+  position: relative;
+  right: 20px;
+  background: #9356dc;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+}
+section article #fonctionnement ol li i {
+  margin-right: 10px;
+}
+section article #restaurant {
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+section article #restaurant .card {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 89%;
+}
+section article #restaurant .card figure {
+  padding-top: 10px;
+}
+section article #restaurant .card figure img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+}
+section article #restaurant .card figure figcaption {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+}
+section article #restaurant .card figure figcaption a {
+  text-decoration: none;
+  color: black;
+}
+section article #restaurant .card figure figcaption .figcaptionElement {
+  display: flex;
+  justify-content: space-between;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--paragraphe {
+  text-align: left;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--logo {
+  padding-top: 10px;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--logo .vide {
+  color: black;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--logo .vide .remplis {
+  opacity: 0;
+  position: relative;
+  right: 16px;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--logo .vide .remplis:hover {
+  opacity: 1;
+  color: #9356dc;
+}
+section article #restaurant .card figure figcaption .figcaptionElement .figcaptionElement--paragraphe--paragrapheBold {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #363231;
+  color: whitesmoke;
+  padding: 25px;
+}
+footer ul img {
+  width: 140px;
+  height: 30px;
+  background-color: #363231;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li .footerContent {
+  padding-left: 5px;
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+
+/*-----------TABLETTE-----------*/
+@media screen and (min-width:426px) and (max-width:1024px) {
+  body {
+    min-width: 100%;
+  }
+
+  section article #fonctionnement ol {
+    width: 70%;
+    margin: auto;
+  }
+
+  #restaurant .part1 {
+    display: flex;
+  }
+  #restaurant .part1 .card {
+    padding: 10px;
+  }
+  #restaurant .part2 {
+    display: flex;
+  }
+  #restaurant .part2 .card {
+    padding: 10px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/*-----------FIN TABLETTE-----------*/
+/*-----------LAPTOP-----------*/
+@media screen and (min-width:1025px) {
+  body {
+    min-width: 100%;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .loading {
+    left: 45%;
+  }
+
+  section article h2 {
+    text-align: center;
+  }
+
+  #fonctionnement ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  #fonctionnement ol li {
+    width: 30%;
+    text-align: center;
+  }
+
+  #restaurant #mainRestaurant {
+    display: flex;
+    justify-content: space-around;
+  }
+  #restaurant #mainRestaurant .card figure {
+    margin: auto;
+  }
+  #restaurant #mainRestaurant .card figure img {
+    height: 500px;
+    width: 760px;
+    max-width: 100%;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

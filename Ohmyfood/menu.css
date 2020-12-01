@@ -1,0 +1,404 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+td:not([align]), th:not([align]) {
+  text-align: left;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slidePrix {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-20%);
+  }
+}
+* body {
+  max-width: 425px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  animation: apparition 0.8s ease-out;
+  transition-duration: 2s;
+}
+
+header {
+  width: 100%;
+  margin: auto;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 45px;
+  margin: auto;
+}
+header nav a {
+  position: relative;
+  left: 5%;
+  top: 20px;
+  text-decoration: none;
+  color: black;
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+header #imgLogo {
+  width: 200px;
+  position: relative;
+  left: 20%;
+}
+header #headerContent img {
+  height: 40px;
+}
+header #headerContent i {
+  padding-top: 10px;
+  padding-right: 90px;
+  font-size: 20px;
+}
+
+#photoPlat {
+  position: relative;
+  top: 20px;
+  z-index: -1;
+}
+
+section {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+section #titleSection {
+  display: flex;
+  justify-content: space-between;
+}
+section #titleSection h2 {
+  text-align: left;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+}
+section #titleSection #logoTitle .vide {
+  cursor: pointer;
+}
+section #titleSection #logoTitle .remplis {
+  opacity: 0;
+  position: relative;
+  right: 50%;
+}
+section #titleSection #logoTitle .remplis:hover {
+  opacity: 1;
+  color: #9356dc;
+}
+section h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+  border-bottom: solid 2px #99d2f0;
+  width: 15%;
+}
+section article {
+  padding: 30px;
+}
+section article #anime1 {
+  animation: slideDown 500ms forwards;
+}
+section article #anime2 {
+  animation: slideDown 700ms forwards;
+  animation-delay: 700ms;
+}
+section article #anime3 {
+  animation: slideDown 900ms forwards;
+  animation-delay: 900ms;
+}
+section article #anime4 {
+  animation: slideDown 1100ms forwards;
+  animation-delay: 1100ms;
+}
+section article #anime5 {
+  animation: slideDown 1300ms forwards;
+  animation-delay: 1300ms;
+}
+section article #anime6 {
+  animation: slideDown 1500ms forwards;
+  animation-delay: 1500ms;
+}
+section article #anime7 {
+  animation: slideDown 1700ms forwards;
+  animation-delay: 1700ms;
+}
+section article #anime8 {
+  animation: slideDown 1900ms forwards;
+  animation-delay: 1900ms;
+}
+section article #anime9 {
+  animation: slideDown 2100ms forwards;
+  animation-delay: 2100ms;
+}
+section article #anime10 {
+  animation: slideDown 2300ms forwards;
+  animation-delay: 2300ms;
+}
+section article #anime11 {
+  animation: slideDown 2500ms forwards;
+  animation-delay: 2500ms;
+}
+section article .assiete {
+  padding: 2px;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  box-shadow: 5px 5px 5px 5px grey;
+  margin-bottom: 20px;
+  text-align: left;
+  cursor: pointer;
+  /*FIN ANIMATION*/
+}
+section article .assiete:hover {
+  /*-------------FIN ANIMATION*-------------*/
+}
+section article .assiete:hover .iconSlide {
+  transition-duration: 400ms;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #99e2d0;
+  width: 20%;
+}
+section article .assiete:hover .iconSlide i {
+  visibility: visible;
+  transform: rotate(360deg);
+  transition-duration: 400ms;
+  color: white;
+}
+section article .assiete:hover .prix {
+  transition-duration: 400ms;
+  width: 20%;
+  margin-right: 20px;
+}
+section article .assiete:hover .overflow {
+  width: 60%;
+}
+section article .assiete .overflow {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 7%;
+}
+section article .assiete .prix {
+  font-weight: bolder;
+  width: 15%;
+  text-align: right;
+  position: relative;
+  top: 5px;
+  transition: all 2s;
+  width: 20%;
+  margin-top: 5%;
+}
+section article .assiete .iconSlide {
+  width: 0%;
+}
+section article .assiete .iconSlide i {
+  visibility: hidden;
+  padding: 15px;
+  color: white;
+}
+section article .assiete .bold {
+  font-weight: bolder;
+}
+section a {
+  text-decoration: none;
+  color: white;
+}
+section button {
+  background: linear-gradient(to top left, #9345dc, #ff79da);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px #f2f2f2;
+  padding: 15px 30px 15px 30px;
+  color: white;
+  transition: transform;
+}
+section button:hover {
+  transition: 400ms;
+  background: #bc95e9;
+  box-shadow: 0 30px 30px #ababab;
+}
+
+footer {
+  background-color: #363231;
+  color: whitesmoke;
+  padding: 25px;
+}
+footer ul img {
+  width: 140px;
+  height: 30px;
+  background-color: #363231;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li .footerContent {
+  padding-left: 5px;
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width:426px) and (max-width:1024px) {
+  body {
+    min-width: 100%;
+  }
+
+  section h2 {
+    text-align: center;
+  }
+  section #mainSection {
+    justify-content: space-between;
+  }
+  section #mainSection article {
+    width: 60%;
+    margin: auto;
+  }
+  section #mainSection article h3 {
+    padding-left: 42%;
+  }
+
+  #restaurant h2 {
+    text-align: center;
+  }
+  #restaurant .part1 {
+    display: flex;
+  }
+  #restaurant .part1 .card {
+    padding: 10px;
+  }
+  #restaurant .part2 {
+    display: flex;
+  }
+  #restaurant .part2 .card {
+    padding: 10px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/*-----------FIN TABLETTE-----------*/
+/*-----------LAPTOP-----------*/
+@media screen and (min-width:1025px) {
+  body {
+    min-width: 100%;
+  }
+
+  header {
+    border: 2px solid red;
+  }
+  header #headerContent img {
+    height: 40px;
+  }
+  header nav {
+    justify-content: center;
+  }
+  header nav .fa-arrow-left {
+    display: none;
+  }
+
+  #photoPlat .imgPlat {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  section h2 {
+    text-align: center;
+  }
+  section #mainSection {
+    display: flex;
+    justify-content: space-between;
+  }
+  section #mainSection article {
+    width: 30%;
+  }
+  section #mainSection article h3 {
+    padding-left: 42%;
+  }
+
+  footer {
+    width: 100%;
+    margin: auto;
+  }
+  footer ul {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
