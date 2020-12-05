@@ -241,11 +241,11 @@ section article .assiete:hover .iconSlide {
   background-color: #99e2d0;
   width: 20%;
 }
-section article .assiete:hover .iconSlide i {
+section article .assiete:hover .iconSlide .fa-check-circle {
   visibility: visible;
   transform: rotate(360deg);
   transition-duration: 400ms;
-  color: white;
+  font-size: large;
 }
 section article .assiete:hover .prix {
   transition-duration: 400ms;
@@ -277,7 +277,7 @@ section article .assiete .prix {
 section article .assiete .iconSlide {
   width: 0%;
 }
-section article .assiete .iconSlide i {
+section article .assiete .iconSlide .fa-check-circle {
   visibility: hidden;
   padding: 15px;
   color: white;
