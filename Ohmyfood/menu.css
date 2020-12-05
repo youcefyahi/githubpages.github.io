@@ -79,6 +79,35 @@ td:not([align]), th:not([align]) {
   transition-duration: 2s;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  margin: auto;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Shrikhand", cursive;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+  border-bottom: solid 2px #99d2f0;
+  width: 15%;
+}
+
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+}
+
 header {
   width: 100%;
   margin: auto;
@@ -86,11 +115,6 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-}
-header nav h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 45px;
-  margin: auto;
 }
 header nav a {
   position: relative;
@@ -133,11 +157,6 @@ section #titleSection {
   display: flex;
   justify-content: space-between;
 }
-section #titleSection h2 {
-  text-align: left;
-  font-family: "Shrikhand", cursive;
-  font-size: 20px;
-}
 section #titleSection #logoTitle .vide {
   cursor: pointer;
 }
@@ -149,13 +168,6 @@ section #titleSection #logoTitle .remplis {
 section #titleSection #logoTitle .remplis:hover {
   opacity: 1;
   color: #9356dc;
-}
-section h3 {
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: left;
-  border-bottom: solid 2px #99d2f0;
-  width: 15%;
 }
 section article {
   padding: 30px;
@@ -204,20 +216,20 @@ section article #anime11 {
   animation-delay: 2500ms;
 }
 section article .assiete {
-  padding: 2px;
   opacity: 0;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
   width: 100%;
   max-width: 100%;
-  margin: auto;
   box-shadow: 5px 5px 5px 5px grey;
   margin-bottom: 20px;
   text-align: left;
+  font-size: 14px;
   cursor: pointer;
-  /*FIN ANIMATION*/
+  /*DEBUT ANIMATION*/
 }
 section article .assiete:hover {
   /*-------------FIN ANIMATION*-------------*/
@@ -244,21 +256,23 @@ section article .assiete:hover .overflow {
   width: 60%;
 }
 section article .assiete .overflow {
-  width: 80%;
+  width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 7%;
 }
+section article .assiete .overflow .bold {
+  font-size: 16px;
+}
 section article .assiete .prix {
   font-weight: bolder;
-  width: 15%;
+  width: 10%;
   text-align: right;
-  position: relative;
-  top: 5px;
-  transition: all 2s;
   width: 20%;
-  margin-top: 5%;
+  font-size: 16px;
+  position: relative;
+  top: 25px;
 }
 section article .assiete .iconSlide {
   width: 0%;
@@ -277,10 +291,11 @@ section a {
 }
 section button {
   background: linear-gradient(to top left, #9345dc, #ff79da);
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 5px 5px 5px 5px #f2f2f2;
-  padding: 15px 30px 15px 30px;
   color: white;
+  font-size: 16px;
+  padding: 13px 50px 13px 50px;
   transition: transform;
 }
 section button:hover {

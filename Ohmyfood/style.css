@@ -76,6 +76,10 @@ td:not([align]), th:not([align]) {
   font-family: "Roboto", sans-serif;
 }
 
+p {
+  font-size: 16px;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 50px;
@@ -130,10 +134,11 @@ header #intro .bold {
 }
 header #intro button {
   background: linear-gradient(to top left, #9345dc, #ff79da);
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 5px 5px 5px 5px #f2f2f2;
-  padding: 15px 30px 15px 30px;
   color: white;
+  font-size: 16px;
+  padding: 15px 27px 15px 27px;
   transition: transform;
   margin-bottom: 50px;
 }
@@ -192,13 +197,13 @@ section article #fonctionnement ol li:before {
   margin: auto;
   content: counter(liste);
   position: relative;
-  right: 20px;
+  right: 15px;
   background: #9356dc;
   margin-bottom: 5px;
   border-radius: 50%;
-  padding: 10px;
+  padding: 5px 8px 5px 8px;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 12px;
   color: white;
 }
 section article #fonctionnement ol li i {
