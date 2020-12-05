@@ -12,17 +12,38 @@
     transition-duration: 2s;
 }
 
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 50px;
+    margin: auto;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Shrikhand', cursive;
+}
+
+h3 {
+    @include styleH3;
+    width: 15%;
+}
+
+h4,
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
 header {
     width: 100%;
     margin: auto;
     nav {
         display: flex;
         justify-content: space-between;
-        h1 {
-            font-family: 'Shrikhand', cursive;
-            font-size: 45px;
-            margin: auto;
-        }
         a {
             position: relative;
             left: 5%;
@@ -64,11 +85,6 @@ section {
     #titleSection {
         display: flex;
         justify-content: space-between;
-        h2 {
-            text-align: left;
-            font-family: 'Shrikhand', cursive;
-            font-size: 20px;
-        }
         #logoTitle {
             .vide {
                 cursor: pointer;
@@ -83,10 +99,6 @@ section {
                 }
             }
         }
-    }
-    h3 {
-        @include styleH3;
-        width: 15%;
     }
     article {
         padding: 30px;
@@ -134,20 +146,20 @@ section {
             animation-delay: 2500ms;
         }
         .assiete {
-            padding: 2px;
             opacity: 0;
+            padding: 5px;
             display: flex;
             justify-content: space-between;
             background-color: white;
             border-radius: 10px;
             width: 100%;
             max-width: 100%;
-            margin: auto;
             box-shadow: 5px 5px 5px 5px grey;
             margin-bottom: 20px;
             text-align: left;
+            font-size: 14px;
             cursor: pointer;
-            /*FIN ANIMATION*/
+            /*DEBUT ANIMATION*/
             &:hover {
                 .iconSlide {
                     transition-duration: 400ms;
@@ -155,11 +167,11 @@ section {
                     border-bottom-right-radius: 10px;
                     background-color: #99e2d0;
                     width: 20%;
-                    i {
+                    .fa-check-circle {
                         visibility: visible;
                         transform: rotate(360deg);
                         transition-duration: 400ms;
-                        color: white;
+                        font-size: 25px;
                     }
                 }
                 .prix {
@@ -173,25 +185,27 @@ section {
                 /*-------------FIN ANIMATION*-------------*/
             }
             .overflow {
-                width: 80%;
+                width: 90%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 margin-bottom: 7%;
+                .bold {
+                    font-size: 16px;
+                }
             }
             .prix {
                 font-weight: bolder;
-                width: 15%;
+                width: 10%;
                 text-align: right;
-                position: relative;
-                top: 5px;
-                transition: all 2s;
                 width: 20%;
-                margin-top: 5%;
+                font-size: 16px;
+                position: relative;
+                top: 25px;
             }
             .iconSlide {
                 width: 0%;
-                i {
+                .fa-check-circle {
                     visibility: hidden;
                     padding: 15px;
                     color: white;
@@ -208,6 +222,7 @@ section {
     }
     button {
         @include styleButton;
+        padding: 13px 50px 13px 50px;
         transition: transform;
         &:hover {
             transition: 400ms;
