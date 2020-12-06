@@ -81,31 +81,24 @@ td:not([align]), th:not([align]) {
 
 h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 50px;
+  font-size: 30px;
+  padding-top: 15px;
   margin: auto;
 }
 
 h2 {
   text-align: left;
   margin-left: 12px;
-  margin-bottom: 10px;
-  font-weight: bold;
   font-size: 20px;
   font-family: "Shrikhand", cursive;
 }
 
 h3 {
-  font-weight: bold;
   margin-bottom: 15px;
+  font-weight: 300;
   text-align: left;
   border-bottom: solid 2px #99d2f0;
   width: 15%;
-}
-
-h4,
-h5 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bolder;
 }
 
 header {
@@ -150,6 +143,7 @@ section {
   background-color: #f2f2f2;
   text-align: center;
   padding: 20px;
+  padding-bottom: 25%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -217,14 +211,13 @@ section article #anime11 {
 }
 section article .assiete {
   opacity: 0;
-  padding: 5px;
   display: flex;
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
   width: 100%;
   max-width: 100%;
-  box-shadow: 5px 5px 5px 5px grey;
+  box-shadow: 2px 2px 2px 2px grey;
   margin-bottom: 20px;
   text-align: left;
   font-size: 14px;
@@ -239,18 +232,19 @@ section article .assiete:hover .iconSlide {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #99e2d0;
+  text-align: center;
   width: 20%;
 }
 section article .assiete:hover .iconSlide .fa-check-circle {
   visibility: visible;
   transform: rotate(360deg);
   transition-duration: 400ms;
-  font-size: large;
+  font-size: 25px;
 }
 section article .assiete:hover .prix {
   transition-duration: 400ms;
   width: 20%;
-  margin-right: 20px;
+  margin-right: 12px;
 }
 section article .assiete:hover .overflow {
   width: 60%;
@@ -260,7 +254,7 @@ section article .assiete .overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 7%;
+  padding: 10px;
 }
 section article .assiete .overflow .bold {
   font-size: 16px;
@@ -269,10 +263,11 @@ section article .assiete .prix {
   font-weight: bolder;
   width: 10%;
   text-align: right;
-  width: 20%;
   font-size: 16px;
   position: relative;
-  top: 25px;
+  top: 10px;
+  right: 10px;
+  margin: auto;
 }
 section article .assiete .iconSlide {
   width: 0%;
@@ -289,16 +284,17 @@ section a {
   text-decoration: none;
   color: white;
 }
-section button {
+section #button {
   background: linear-gradient(to top left, #9345dc, #ff79da);
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 5px #f2f2f2;
   color: white;
   font-size: 16px;
+  border: 1px solid #9345dc;
   padding: 13px 50px 13px 50px;
   transition: transform;
+  font-weight: 400;
 }
-section button:hover {
+section #button:hover {
   transition: 400ms;
   background: #bc95e9;
   box-shadow: 0 30px 30px #ababab;
@@ -324,10 +320,18 @@ footer ul a {
   text-decoration: none;
   color: white;
 }
+footer ul a:hover {
+  text-decoration: underline;
+}
 
 @media screen and (min-width:426px) and (max-width:1024px) {
   body {
     min-width: 100%;
+  }
+
+  h1 {
+    padding: initial;
+    font-size: 50px;
   }
 
   section h2 {
@@ -342,6 +346,10 @@ footer ul a {
   }
   section #mainSection article h3 {
     padding-left: 42%;
+  }
+  section #button {
+    position: relative;
+    top: 50px;
   }
 
   #restaurant h2 {
@@ -372,9 +380,6 @@ footer ul a {
     min-width: 100%;
   }
 
-  header {
-    border: 2px solid red;
-  }
   header #headerContent img {
     height: 40px;
   }
@@ -391,6 +396,9 @@ footer ul a {
     object-fit: cover;
   }
 
+  section {
+    padding-bottom: 10%;
+  }
   section h2 {
     text-align: center;
   }
@@ -403,6 +411,10 @@ footer ul a {
   }
   section #mainSection article h3 {
     padding-left: 42%;
+  }
+  section #button {
+    position: relative;
+    top: 50px;
   }
 
   footer {
