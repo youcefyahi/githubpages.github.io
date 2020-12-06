@@ -85,7 +85,14 @@ h1 {
   font-size: 50px;
 }
 
-h2,
+h2 {
+  text-align: left;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
 h3,
 h4,
 h5 {
@@ -138,6 +145,7 @@ header #intro button {
   box-shadow: 5px 5px 5px 5px #f2f2f2;
   color: white;
   font-size: 16px;
+  border: 1px solid #9345dc;
   padding: 15px 27px 15px 27px;
   transition: transform;
   margin-bottom: 50px;
@@ -155,18 +163,8 @@ section {
 section article {
   text-align: center;
 }
-section article h2 {
-  text-align: left;
-  margin-left: 12px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 20px;
-}
 section article #fonctionnement {
   margin-bottom: 20px;
-}
-section article #fonctionnement h2 {
-  font-size: 20px;
 }
 section article #fonctionnement ol {
   text-align: left;
@@ -197,7 +195,7 @@ section article #fonctionnement ol li:before {
   margin: auto;
   content: counter(liste);
   position: relative;
-  right: 15px;
+  right: 10px;
   background: #9356dc;
   margin-bottom: 5px;
   border-radius: 50%;
@@ -324,16 +322,8 @@ footer ul a {
     min-width: 100%;
   }
 
-  h2 {
-    font-family: "Roboto", sans-serif;
-  }
-
   .loading {
     left: 45%;
-  }
-
-  section article h2 {
-    text-align: center;
   }
 
   #fonctionnement ol {
