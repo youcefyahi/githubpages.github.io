@@ -19,7 +19,14 @@ h1 {
     font-size: 50px;
 }
 
-h2,
+h2 {
+    text-align: left;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
 h3,
 h4,
 h5 {
@@ -72,18 +79,8 @@ section {
     margin-top: 30px;
     article {
         text-align: center;
-        h2 {
-            text-align: left;
-            margin-left: 12px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 20px;
-        }
         #fonctionnement {
             margin-bottom: 20px;
-            h2 {
-                font-size: 20px;
-            }
             ol {
                 text-align: left;
                 padding: 20px;
@@ -111,7 +108,7 @@ section {
                         margin: auto;
                         content: counter(liste);
                         position: relative;
-                        right: 15px;
+                        right: 10px;
                         background: #9356dc;
                         margin-bottom: 5px;
                         border-radius: 50%;
@@ -257,18 +254,8 @@ footer {
     body {
         min-width: 100%;
     }
-    h2 {
-        font-family: 'Roboto', sans-serif;
-    }
     .loading {
         left: 45%;
-    }
-    section {
-        article {
-            h2 {
-                text-align: center;
-            }
-        }
     }
     #fonctionnement {
         ol {
