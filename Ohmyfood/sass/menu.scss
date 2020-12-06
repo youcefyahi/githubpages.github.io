@@ -14,15 +14,14 @@
 
 h1 {
     font-family: 'Shrikhand', cursive;
-    font-size: 50px;
+    font-size: 30px;
+    padding-top: 15px;
     margin: auto;
 }
 
 h2 {
     text-align: left;
     margin-left: 12px;
-    margin-bottom: 10px;
-    font-weight: bold;
     font-size: 20px;
     font-family: 'Shrikhand', cursive;
 }
@@ -30,12 +29,6 @@ h2 {
 h3 {
     @include styleH3;
     width: 15%;
-}
-
-h4,
-h5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
 }
 
 header {
@@ -80,6 +73,7 @@ section {
     background-color: #f2f2f2;
     text-align: center;
     padding: 20px;
+    padding-bottom: 25%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     #titleSection {
@@ -147,14 +141,13 @@ section {
         }
         .assiete {
             opacity: 0;
-            padding: 5px;
             display: flex;
             justify-content: space-between;
             background-color: white;
             border-radius: 10px;
             width: 100%;
             max-width: 100%;
-            box-shadow: 5px 5px 5px 5px grey;
+            box-shadow: 2px 2px 2px 2px grey;
             margin-bottom: 20px;
             text-align: left;
             font-size: 14px;
@@ -166,6 +159,7 @@ section {
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     background-color: #99e2d0;
+                    text-align: center;
                     width: 20%;
                     .fa-check-circle {
                         visibility: visible;
@@ -177,7 +171,7 @@ section {
                 .prix {
                     transition-duration: 400ms;
                     width: 20%;
-                    margin-right: 20px;
+                    margin-right: 12px;
                 }
                 .overflow {
                     width: 60%;
@@ -189,7 +183,7 @@ section {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                margin-bottom: 7%;
+                padding: 10px;
                 .bold {
                     font-size: 16px;
                 }
@@ -198,10 +192,11 @@ section {
                 font-weight: bolder;
                 width: 10%;
                 text-align: right;
-                width: 20%;
                 font-size: 16px;
                 position: relative;
-                top: 25px;
+                top: 10px;
+                right: 10px;
+                margin: auto;
             }
             .iconSlide {
                 width: 0%;
@@ -220,10 +215,11 @@ section {
         text-decoration: none;
         color: white;
     }
-    button {
+    #button {
         @include styleButton;
         padding: 13px 50px 13px 50px;
         transition: transform;
+        font-weight: 400;
         &:hover {
             transition: 400ms;
             background: lighten($color: #9356dc, $amount: 15%);
@@ -251,6 +247,9 @@ footer {
         a {
             text-decoration: none;
             color: white;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -258,6 +257,10 @@ footer {
 @media #{$medium-up} {
     body {
         min-width: 100%;
+    }
+    h1 {
+        padding: initial;
+        font-size: 50px;
     }
     section {
         h2 {
@@ -272,6 +275,10 @@ footer {
                     padding-left: 42%;
                 }
             }
+        }
+        #button {
+            position: relative;
+            top: 50px;
         }
     }
     #restaurant {
@@ -308,7 +315,6 @@ footer {
         min-width: 100%;
     }
     header {
-        border: 2px solid red;
         #headerContent img {
             height: 40px;
         }
@@ -327,6 +333,7 @@ footer {
         }
     }
     section {
+        padding-bottom: 10%;
         h2 {
             text-align: center;
         }
@@ -339,6 +346,10 @@ footer {
                     padding-left: 42%;
                 }
             }
+        }
+        #button {
+            position: relative;
+            top: 50px;
         }
     }
     footer {
