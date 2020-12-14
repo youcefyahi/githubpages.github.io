@@ -82,7 +82,7 @@ p {
 
 h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 h2 {
@@ -142,7 +142,6 @@ header #intro .bold {
 header #intro button {
   background: linear-gradient(to top left, #9345dc, #ff79da);
   border-radius: 25px;
-  box-shadow: 5px 5px 5px 5px #f2f2f2;
   color: white;
   font-size: 16px;
   border: 1px solid #9345dc;
